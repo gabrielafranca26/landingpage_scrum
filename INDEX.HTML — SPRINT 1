@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça o Framework Scrum e seus princípios.">
+    <title>Framework Scrum | Metodologia Ágil</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <strong>Scrum Framework</strong>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#papeis">Papéis</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#artefatos">Artefatos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Conheça o Framework Scrum</h1>
+            <p>
+                Uma abordagem ágil para desenvolver produtos
+                complexos por meio de colaboração, adaptação
+                e entregas incrementais.
+            </p>
+            <a href="https://scrumguides.org/" target="_blank" rel="noopener noreferrer">
+                Conheça o Guia Scrum
+            </a>
+        </section>
+
+        <section>
+            <h2>O que é Scrum?</h2>
+            <p>
+                Scrum é um framework leve que ajuda pessoas,
+                equipes e organizações a gerar valor por meio
+                de soluções adaptativas para problemas complexos.
+            </p>
+        </section>
+
+        <section>
+            <h2>Responsabilidades no Scrum</h2>
+
+            <article>
+                <h3>Product Owner</h3>
+                <p>
+                    Responsável por maximizar o valor do produto
+                    e gerenciar o Product Backlog.
+                </p>
+            </article>
+
+            <article>
+                <h3>Scrum Master</h3>
+                <p>
+                    Responsável por estabelecer o Scrum e ajudar
+                    a equipe a melhorar sua efetividade.
+                </p>
+            </article>
+
+            <article>
+                <h3>Developers</h3>
+                <p>
+                    Profissionais responsáveis por criar
+                    um incremento utilizável a cada Sprint.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Eventos do Scrum</h2>
+
+            <ol>
+                <li>Sprint</li>
+                <li>Sprint Planning</li>
+                <li>Daily Scrum</li>
+                <li>Sprint Review</li>
+                <li>Sprint Retrospective</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Artefatos do Scrum</h2>
+
+            <article>
+                <h3>Product Backlog</h3>
+                <p>Lista ordenada do que é necessário para melhorar o produto.</p>
+            </article>
+
+            <article>
+                <h3>Sprint Backlog</h3>
+                <p>Plano de trabalho dos Developers para a Sprint.</p>
+            </article>
+
+            <article>
+                <h3>Incremento</h3>
+                <p>Resultado utilizável e integrado ao produto.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Comece a utilizar Scrum!</h2>
+            <p>Transforme a maneira como sua equipe trabalha.</p>
+            <a href="https://scrumguides.org/" target="_blank" rel="noopener noreferrer">
+                Saiba mais
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Workshop Ágil - Sala 01 | 2026</p>
+        <p>Desenvolvido por Aluno 1 e Aluno 2</p>
+    </footer>
+
+</body>
+</html>
