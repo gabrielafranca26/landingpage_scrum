@@ -11,18 +11,18 @@
 
 Para considerar a atividade concluida, o grupo deve cumprir:
 
-- [ ] Sprint 1 planejada com tarefas separadas para HTML5 e CSS3.
-- [ ] Branch `feature/html5-scrum-aluno-1` criada a partir da `main`.
-- [ ] Branch `feature/css3-scrum-aluno-2` criada a partir da `main`.
-- [ ] `index.html` criado em HTML5 puro, sem `class`, sem `id` e sem link para CSS.
-- [ ] `assets/css/styles.css` criado com CSS3 responsivo e seletores planejados.
-- [ ] Commits criados com mensagens claras no padrao Conventional Commits.
-- [ ] Pull Requests abertos para a `main`.
-- [ ] Cada PR revisado por outra pessoa.
-- [ ] Branches da Sprint 1 integradas na `main`.
-- [ ] Sprint 2 criada para integrar HTML + CSS.
+- [x] Sprint 1 planejada com tarefas separadas para HTML5 e CSS3.
+- [x] Branch `feature/html5-scrum-aluno-1` criada a partir da `main`.
+- [x] Branch `feature/css3-scrum-aluno-2` criada a partir da `main`.
+- [x] `index.html` criado em HTML5 puro, sem `class`, sem `id` e sem link para CSS.
+- [x] `assets/css/styles.css` criado com CSS3 responsivo e seletores planejados.
+- [x] Commits criados com mensagens claras no padrao Conventional Commits.
+- [x] Pull Requests abertos para a `main`.
+- [x] Cada PR revisado por outra pessoa.
+- [x] Branches da Sprint 1 integradas na `main`.
+- [x] Sprint 2 criada para integrar HTML + CSS.
 - [ ] Classes, ids e link do CSS aplicados no HTML durante a integracao.
-- [ ] Validacao registrada pelo pelos 2 alunos.
+- [x] Validacao registrada pelo pelos 2 alunos.
 - [ ] Landing page demonstrada na Sprint Review.
 - [ ] Retrospectiva preenchida em `RETROSPECTIVE.md`.
 

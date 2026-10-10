@@ -1,0 +1,607 @@
+/* 1. Variáveis globais */
+:root {
+  /* Cores */
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-secondary: #7c3aed;
+  --color-accent: #06b6d4;
+
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+
+  /* Tipografia */
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-title: clamp(2rem, 6vw, 3.75rem);
+
+  /* Espaçamentos */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Layout */
+  --container-width: 1200px;
+  --header-height: 4.5rem;
+  --border-radius: 0.75rem;
+  --border-radius-lg: 1.25rem;
+
+  /* Efeitos */
+  --shadow-sm: 0 2px 8px rgb(15 23 42 / 5%);
+  --shadow-md: 0 8px 24px rgb(15 23 42 / 10%);
+  --transition: 200ms ease;
+}
+
+/* 2. Reset e estilos base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + var(--space-4));
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+p {
+  color: var(--color-text-muted);
+}
+
+ul,
+ol {
+  padding-left: var(--space-6);
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--color-primary);
+}
+
+/* Acessibilidade: foco visível */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+:target {
+  scroll-margin-top: calc(var(--header-height) + var(--space-4));
+}
+
+/* 3. Container reutilizável */
+.container {
+  width: min(100% - 2rem, var(--container-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-12);
+}
+
+.section-title {
+  margin-bottom: var(--space-4);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  text-align: center;
+}
+
+.section-description {
+  max-width: 680px;
+  margin-inline: auto;
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+/* 4. Cabeçalho — .site-header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: var(--header-height);
+  background: rgb(255 255 255 / 95%);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(12px);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  min-height: var(--header-height);
+  padding-block: var(--space-3);
+}
+
+.site-header .logo {
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+}
+
+.site-header nav a {
+  padding-block: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  color: var(--color-primary);
+}
+
+/* 5. Hero — seção principal */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--space-16);
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgb(6 182 212 / 14%),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #eff6ff, #f5f3ff);
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-8);
+}
+
+.hero-content {
+  width: 100%;
+}
+
+.hero h1 {
+  max-width: 850px;
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-title);
+  font-weight: 850;
+  letter-spacing: -0.055em;
+}
+
+.hero h1 span {
+  color: var(--color-primary);
+}
+
+.hero p {
+  max-width: 650px;
+  margin-bottom: var(--space-8);
+  font-size: var(--font-size-lg);
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-3);
+}
+
+/* 6. Botões e chamadas para ação */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.btn-primary {
+  color: #ffffff;
+  background: var(--color-primary);
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  background: var(--color-primary-dark);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  color: var(--color-primary);
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+.btn-secondary:hover {
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary);
+  background: #eff6ff;
+}
+
+/* 7. Cards de papéis — .roles-grid */
+.roles-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+}
+
+.role-card {
+  height: 100%;
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.role-card:hover {
+  border-color: #bfdbfe;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.role-card h3 {
+  margin-bottom: var(--space-3);
+}
+
+.role-card p:last-child {
+  margin-bottom: 0;
+}
+
+.role-icon {
+  display: grid;
+  width: 3rem;
+  aspect-ratio: 1;
+  margin-bottom: var(--space-4);
+  place-items: center;
+  color: var(--color-primary);
+  background: #eff6ff;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-xl);
+}
+
+/* 8. Linha do tempo — .events-timeline */
+.events-timeline {
+  display: grid;
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.events-timeline li {
+  position: relative;
+  min-width: 0;
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.events-timeline h3 {
+  margin-bottom: var(--space-2);
+}
+
+.events-timeline p:last-child {
+  margin-bottom: 0;
+}
+
+.event-label {
+  display: inline-block;
+  margin-bottom: var(--space-3);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* 9. Artefatos — .artifacts */
+.artifacts {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.artifact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5, 1.25rem);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.artifact-item:hover {
+  border-color: #c4b5fd;
+  box-shadow: var(--shadow-sm);
+}
+
+.artifact-item h3 {
+  margin-bottom: var(--space-2);
+}
+
+.artifact-item p:last-child {
+  margin-bottom: 0;
+}
+
+/* 10. Chamada final — .cta-section */
+.cta-section {
+  padding-block: var(--space-12);
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+}
+
+.cta-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  text-align: center;
+}
+
+.cta-section h2 {
+  max-width: 750px;
+  margin-bottom: 0;
+  color: #ffffff;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+}
+
+.cta-section p {
+  max-width: 650px;
+  margin-bottom: 0;
+  color: #e0e7ff;
+}
+
+.cta-section .btn-primary {
+  color: var(--color-primary-dark);
+  background: #ffffff;
+}
+
+.cta-section .btn-primary:hover {
+  color: #1e40af;
+  background: #eff6ff;
+}
+
+/* 11. Framework Scrum — #scrum-framework */
+#scrum-framework {
+  scroll-margin-top: calc(var(--header-height) + var(--space-4));
+}
+
+#scrum-framework .framework-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+}
+
+#scrum-framework .framework-card {
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+}
+
+#scrum-framework .framework-card h3 {
+  color: var(--color-primary);
+}
+
+/* 12. Rodapé */
+.site-footer {
+  padding-block: var(--space-8);
+  background: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+  color: #cbd5e1;
+  font-size: var(--font-size-sm);
+}
+
+.site-footer a {
+  color: #93c5fd;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+/* 13. Seleção de elementos e estados */
+a[aria-current="page"] {
+  font-weight: 800;
+}
+
+button:disabled,
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  border-color: var(--color-primary);
+}
+
+.card-grid > * {
+  min-width: 0;
+}
+
+/* 14. Tablet — a partir de 600px */
+@media (min-width: 600px) {
+  .section {
+    padding-block: var(--space-16);
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .roles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .artifacts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #scrum-framework .framework-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .events-timeline {
+    gap: var(--space-8);
+  }
+}
+
+/* 15. Desktop — a partir de 900px */
+@media (min-width: 900px) {
+  .hero {
+    padding-block: 7rem;
+  }
+
+  .hero .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-content {
+    max-width: 850px;
+  }
+
+  .roles-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .events-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .cta-section {
+    padding-block: 5rem;
+  }
+}
+
+/* 16. Telas grandes — a partir de 1200px */
+@media (min-width: 1200px) {
+  .artifacts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* 17. Preferências de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
