@@ -605,3 +605,9 @@ select:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Workshop Parte 2 - Alteração Aluno 1 */
+.hero h1 span {
+    color: #16a34a;
+}
