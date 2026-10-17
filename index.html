@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,92 +6,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça o Framework Scrum, suas responsabilidades, eventos e artefatos.">
     <title>Framework Scrum | Workshop Ágil</title>
-<link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <header>
-        <nav aria-label="Navegação principal">
-            <strong>Scrum Framework</strong>
-            <ul>
-                <li><a href="https://scrumguides.org/">Guia Scrum</a></li>
-                <li><a href="https://scrumguides.org/scrum-guide.html">Scrum Guide</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container">
+            <a class="logo" href="#inicio">Scrum Framework</a>
+            <nav aria-label="Navegação principal">
+                <a href="#scrum-framework">O que é Scrum?</a>
+                <a href="#responsabilidades">Responsabilidades</a>
+                <a href="#eventos">Eventos</a>
+                <a href="#artefatos">Artefatos</a>
+                <a href="https://scrumguides.org/">Guia Scrum</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h1>Conheça o Framework Scrum</h1>
-            <p>Colaboração, transparência e melhoria contínua para desenvolver produtos de valor.</p>
-            <p>Descubra como equipes utilizam ciclos curtos de trabalho para inspecionar resultados e adaptar seus planos.</p>
-            <a href="https://scrumguides.org/">Conheça o Guia Scrum</a>
+        <section class="hero" id="inicio">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Conheça o <span>Framework Scrum</span></h1>
+                    <p>Colaboração, transparência e melhoria contínua para desenvolver produtos de valor.</p>
+                    <p>Descubra como equipes utilizam ciclos curtos de trabalho para inspecionar resultados e adaptar seus planos.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#scrum-framework">Conheça o Scrum</a>
+                        <a class="btn btn-secondary" href="https://scrumguides.org/">Conheça o Guia Scrum</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>O que é Scrum?</h2>
-            <p>Scrum é um framework leve que ajuda pessoas, equipes e organizações a gerar valor por meio de soluções adaptativas para problemas complexos.</p>
-            <p>O trabalho acontece em Sprints, períodos de duração fixa de até um mês, nos quais a equipe busca atingir um objetivo e entregar um incremento útil do produto.</p>
+        <section class="section" id="scrum-framework">
+            <div class="container">
+                <h2 class="section-title">O que é Scrum?</h2>
+                <div class="framework-content">
+                    <article class="framework-card">
+                        <h3>Framework leve</h3>
+                        <p>Scrum é um framework leve que ajuda pessoas, equipes e organizações a gerar valor por meio de soluções adaptativas para problemas complexos.</p>
+                    </article>
+                    <article class="framework-card">
+                        <h3>Trabalho em Sprints</h3>
+                        <p>O trabalho acontece em Sprints, períodos de duração fixa de até um mês, nos quais a equipe busca atingir um objetivo e entregar um incremento útil do produto.</p>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Responsabilidades no Scrum</h2>
-            <p>O Scrum Team é formado por Product Owner, Scrum Master e Developers.</p>
-            <article>
-                <h3>Product Owner</h3>
-                <p>Maximiza o valor do produto e é responsável pelo gerenciamento eficaz do Product Backlog.</p>
-            </article>
-            <article>
-                <h3>Scrum Master</h3>
-                <p>Ajuda a estabelecer o Scrum conforme o Guia Scrum e apoia a melhoria da efetividade da equipe.</p>
-            </article>
-            <article>
-                <h3>Developers</h3>
-                <p>Planejam o trabalho da Sprint, mantêm a qualidade e criam um incremento utilizável a cada Sprint.</p>
-            </article>
+        <section class="section" id="responsabilidades">
+            <div class="container">
+                <h2 class="section-title">Responsabilidades no Scrum</h2>
+                <p class="section-description">O Scrum Team é formado por Product Owner, Scrum Master e Developers.</p>
+                <div class="roles-grid">
+                    <article class="role-card">
+                        <span class="role-icon" aria-hidden="true">🎯</span>
+                        <h3>Product Owner</h3>
+                        <p>Maximiza o valor do produto e é responsável pelo gerenciamento eficaz do Product Backlog.</p>
+                    </article>
+                    <article class="role-card">
+                        <span class="role-icon" aria-hidden="true">🤝</span>
+                        <h3>Scrum Master</h3>
+                        <p>Ajuda a estabelecer o Scrum conforme o Guia Scrum e apoia a melhoria da efetividade da equipe.</p>
+                    </article>
+                    <article class="role-card">
+                        <span class="role-icon" aria-hidden="true">💻</span>
+                        <h3>Developers</h3>
+                        <p>Planejam o trabalho da Sprint, mantêm a qualidade e criam um incremento utilizável a cada Sprint.</p>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Eventos do Scrum</h2>
-            <p>Os eventos promovem oportunidades regulares de inspeção e adaptação.</p>
-            <ol>
-                <li><strong>Sprint:</strong> ciclo de trabalho que reúne os demais eventos.</li>
-                <li><strong>Sprint Planning:</strong> define por que a Sprint é valiosa, o que será feito e como o trabalho será realizado.</li>
-                <li><strong>Daily Scrum:</strong> encontro diário de 15 minutos para inspecionar o progresso rumo ao Sprint Goal.</li>
-                <li><strong>Sprint Review:</strong> inspeciona o resultado da Sprint com os stakeholders e discute adaptações.</li>
-                <li><strong>Sprint Retrospective:</strong> identifica maneiras de melhorar a qualidade e a efetividade.</li>
-            </ol>
+        <section class="section" id="eventos">
+            <div class="container">
+                <h2 class="section-title">Eventos do Scrum</h2>
+                <p class="section-description">Os eventos promovem oportunidades regulares de inspeção e adaptação.</p>
+                <ol class="events-timeline">
+                    <li>
+                        <span class="event-label">Evento 1</span>
+                        <h3>Sprint</h3>
+                        <p>Ciclo de trabalho que reúne os demais eventos.</p>
+                    </li>
+                    <li>
+                        <span class="event-label">Evento 2</span>
+                        <h3>Sprint Planning</h3>
+                        <p>Define por que a Sprint é valiosa, o que será feito e como o trabalho será realizado.</p>
+                    </li>
+                    <li>
+                        <span class="event-label">Evento 3</span>
+                        <h3>Daily Scrum</h3>
+                        <p>Encontro diário de 15 minutos para inspecionar o progresso rumo ao Sprint Goal.</p>
+                    </li>
+                    <li>
+                        <span class="event-label">Evento 4</span>
+                        <h3>Sprint Review</h3>
+                        <p>Inspeciona o resultado da Sprint com os stakeholders e discute adaptações.</p>
+                    </li>
+                    <li>
+                        <span class="event-label">Evento 5</span>
+                        <h3>Sprint Retrospective</h3>
+                        <p>Identifica maneiras de melhorar a qualidade e a efetividade.</p>
+                    </li>
+                </ol>
+            </div>
         </section>
 
-        <section>
-            <h2>Artefatos e compromissos</h2>
-            <article>
-                <h3>Product Backlog</h3>
-                <p>Lista ordenada e evolutiva do que é necessário para melhorar o produto.</p>
-                <p><strong>Compromisso:</strong> Product Goal.</p>
-            </article>
-            <article>
-                <h3>Sprint Backlog</h3>
-                <p>Reúne o Sprint Goal, os itens selecionados e o plano para entregar o incremento.</p>
-                <p><strong>Compromisso:</strong> Sprint Goal.</p>
-            </article>
-            <article>
-                <h3>Incremento</h3>
-                <p>Resultado concreto, utilizável e integrado ao trabalho anterior.</p>
-                <p><strong>Compromisso:</strong> Definition of Done.</p>
-            </article>
+        <section class="section" id="artefatos">
+            <div class="container">
+                <h2 class="section-title">Artefatos e compromissos</h2>
+                <div class="artifacts">
+                    <article class="artifact-item">
+                        <div>
+                            <h3>Product Backlog</h3>
+                            <p>Lista ordenada e evolutiva do que é necessário para melhorar o produto.</p>
+                            <p><strong>Compromisso:</strong> Product Goal.</p>
+                        </div>
+                    </article>
+                    <article class="artifact-item">
+                        <div>
+                            <h3>Sprint Backlog</h3>
+                            <p>Reúne o Sprint Goal, os itens selecionados e o plano para entregar o incremento.</p>
+                            <p><strong>Compromisso:</strong> Sprint Goal.</p>
+                        </div>
+                    </article>
+                    <article class="artifact-item">
+                        <div>
+                            <h3>Incremento</h3>
+                            <p>Resultado concreto, utilizável e integrado ao trabalho anterior.</p>
+                            <p><strong>Compromisso:</strong> Definition of Done.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Comece a aprender Scrum</h2>
-            <p>Conheça o guia oficial e descubra como aplicar o framework em projetos reais.</p>
-            <a href="https://scrumguides.org/">Acessar o Guia Scrum</a>
+        <section class="cta-section" id="comecar">
+            <div class="container">
+                <h2>Comece a aprender Scrum</h2>
+                <p>Conheça o guia oficial e descubra como aplicar o framework em projetos reais.</p>
+                <a class="btn btn-primary" href="https://scrumguides.org/">Acessar o Guia Scrum</a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>Workshop Ágil — Sala 01 | 10/10/2026</p>
-        <p>Projeto desenvolvido por Aluno 1 e Aluno 2.</p>
-        <p>Conteúdo educativo sobre o Framework Scrum.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>Workshop Ágil — Sala 01 | 10/10/2026</p>
+            <p>Projeto desenvolvido por Aluno 1 e Aluno 2.</p>
+            <p>Conteúdo educativo sobre o Framework Scrum.</p>
+        </div>
     </footer>
 </body>
 </html>
